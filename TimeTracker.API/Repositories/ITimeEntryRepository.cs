@@ -6,6 +6,7 @@ namespace TimeTracker.API.Repositories
     {
         List<TimeEntry> GetAllTimeEntries();
         List<TimeEntry> CreateTimeEntry(TimeEntry timeEntry);
+        List<TimeEntry>? UpdateTimeEntry(int id, TimeEntry timeEntry);
 
     }
 }

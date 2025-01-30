@@ -4,6 +4,7 @@ namespace TimeTracker.API.Repositories
 {
     public class TimeEntryRepository : ITimeEntryRepository
     {
+
         private static List<TimeEntry> _timeEntries = new List<TimeEntry>
         {
             new TimeEntry
@@ -23,6 +24,17 @@ namespace TimeTracker.API.Repositories
 
         public List<TimeEntry> GetAllTimeEntries()
         {
+            return _timeEntries;
+        }
+
+        public List<TimeEntry>? UpdateTimeEntry(int id, TimeEntry timeEntry)
+        {
+            var entryToUpdateIndex = _timeEntries.FindIndex(t => t.Id == id);
+            if (entryToUpdateIndex == -1 )
+            {
+                return null;
+            }
+            _timeEntries[entryToUpdateIndex] = timeEntry;
             return _timeEntries;
         }
     }

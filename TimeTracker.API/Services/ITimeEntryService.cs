@@ -7,5 +7,7 @@ namespace TimeTracker.API.Services
     {
         List<TimeEntryResponse> GetAllTimeEntries();
         List<TimeEntryResponse> CreateTimeEntry(TimeEntryCreateRequest timeEntry);
+
+        List<TimeEntryResponse>? UpdateTimeEntry(int id, TimeEntryUpdateRequest timeEntryUpdate);
     }
 }
