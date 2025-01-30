@@ -37,5 +37,15 @@ namespace TimeTracker.API.Services
             }
             return result.Adapt<List<TimeEntryResponse>>();
         }
+
+        public List<TimeEntryResponse>? DeleteTimeEntry(int id)
+        {
+            var result = _timeEntryRepository.DeleteTimeEntry(id);
+            if( result == null) 
+            {
+                return null;            
+            }
+            return result.Adapt<List<TimeEntryResponse>>();
+        }
     }
 }

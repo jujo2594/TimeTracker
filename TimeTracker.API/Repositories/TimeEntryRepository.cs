@@ -37,5 +37,17 @@ namespace TimeTracker.API.Repositories
             _timeEntries[entryToUpdateIndex] = timeEntry;
             return _timeEntries;
         }
+
+        public List<TimeEntry>? DeleteTimeEntry(int id)
+        {
+            var entryToDelete = _timeEntries.FirstOrDefault(t => t.Id == id);
+            if (entryToDelete == null) 
+            {
+                return null;
+            }
+            _timeEntries.Remove(entryToDelete);
+            return _timeEntries;
+
+        }
     }
 }

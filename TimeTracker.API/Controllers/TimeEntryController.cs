@@ -41,5 +41,15 @@ namespace TimeTracker.API.Controllers
             return Ok(result);
         }
 
+        [HttpDelete("{id}")]
+        public ActionResult<List<TimeEntryResponse>> DeleteTimeEntry(int id) 
+        {
+            var result = _timeEntryService.DeleteTimeEntry(id);
+            if (result == null)
+            {
+                return NotFound("Time Entry with the given Id was not found!");
+            }
+            return Ok(result);
+        }
     }
 }
