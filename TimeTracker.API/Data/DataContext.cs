@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Data.Common;
-using TimeTracker.Core.Entities;
+﻿using System.Data.Common;
 
 namespace TimeTracker.API.Data
 {
