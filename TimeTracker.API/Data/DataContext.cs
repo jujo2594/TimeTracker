@@ -8,7 +8,6 @@ namespace TimeTracker.API.Data
         {
             
         }
-
         public DbSet<TimeEntry> TimeEntries { get; set; }
     }
 }
