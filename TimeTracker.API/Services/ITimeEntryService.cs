@@ -6,6 +6,7 @@ namespace TimeTracker.API.Services
     public interface ITimeEntryService
     {
         List<TimeEntryResponse> GetAllTimeEntries();
+        TimeEntryResponse? GetTimeEntryById(int id);
         List<TimeEntryResponse> CreateTimeEntry(TimeEntryCreateRequest timeEntry);
         List<TimeEntryResponse>? UpdateTimeEntry(int id, TimeEntryUpdateRequest timeEntryUpdate);
         List<TimeEntryResponse>? DeleteTimeEntry(int id);
